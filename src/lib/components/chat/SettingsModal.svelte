@@ -192,7 +192,7 @@
 			]
 		},
 		...($user?.role === 'admin' ||
-		($user?.role === 'user' && $config?.features?.enable_direct_connections)
+		($user?.role === 'admin' && $config?.features?.enable_direct_connections)
 			? [
 					{
 						id: 'connections',
@@ -253,6 +253,10 @@
 				'userpreferences'
 			]
 		},
+
+			...($user?.role === 'admin' ||
+		($user?.role === 'admin' && $config?.features?.enable_direct_connections)
+			? [
 		{
 			id: 'audio',
 			title: 'Audio',
@@ -328,7 +332,7 @@
 				'voicespeed',
 				'volume'
 			]
-		},
+		}] : []),
 		{
 			id: 'chats',
 			title: 'Chats',

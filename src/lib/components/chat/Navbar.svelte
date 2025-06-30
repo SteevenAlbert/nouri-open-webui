@@ -148,19 +148,21 @@
 						</Menu>
 					{/if}
 
-					<Tooltip content={$i18n.t('Controls')}>
-						<button
-							class=" flex cursor-pointer px-2 py-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-850 transition"
-							on:click={async () => {
-								await showControls.set(!$showControls);
-							}}
-							aria-label="Controls"
-						>
-							<div class=" m-auto self-center">
-								<AdjustmentsHorizontal className=" size-5" strokeWidth="0.5" />
-							</div>
-						</button>
-					</Tooltip>
+					{#if $user?.role === 'admin'}
+						<Tooltip content={$i18n.t('Controls')}>
+							<button
+								class=" flex cursor-pointer px-2 py-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-850 transition"
+								on:click={async () => {
+									await showControls.set(!$showControls);
+								}}
+								aria-label="Controls"
+							>
+								<div class=" m-auto self-center">
+									<AdjustmentsHorizontal className=" size-5" strokeWidth="0.5" />
+								</div>
+							</button>
+						</Tooltip>
+					{/if}
 
 					{#if $user !== undefined && $user !== null}
 						<UserMenu
@@ -180,7 +182,7 @@
 								<div class=" self-center">
 									<img
 										src={$user?.profile_image_url}
-										class="size-6 object-cover rounded-full"
+										class="size-8 object-cover rounded-full"
 										alt="User profile"
 										draggable="false"
 									/>

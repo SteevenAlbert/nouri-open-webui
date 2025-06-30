@@ -379,7 +379,7 @@
 		sideOffset={3}
 	>
 		<slot>
-			{#if searchEnabled}
+			<!-- {#if searchEnabled}
 				<div class="flex items-center gap-2.5 px-5 mt-3.5 mb-1.5">
 					<Search className="size-4" strokeWidth="2.5" />
 
@@ -408,7 +408,7 @@
 						}}
 					/>
 				</div>
-			{/if}
+			{/if} -->
 
 			<div class="px-3">
 				{#if tags && items.filter((item) => !(item.model?.info?.meta?.hidden ?? false)).length > 0}
@@ -425,7 +425,7 @@
 							class="flex gap-1 w-fit text-center text-sm font-medium rounded-full bg-transparent px-1.5 pb-0.5"
 							bind:this={tagsContainerElement}
 						>
-							{#if items.find((item) => item.model?.connection_type === 'local') || items.find((item) => item.model?.connection_type === 'external') || items.find((item) => item.model?.direct) || tags.length > 0}
+							<!-- {#if items.find((item) => item.model?.connection_type === 'local') || items.find((item) => item.model?.connection_type === 'external') || items.find((item) => item.model?.direct) || tags.length > 0}
 								<button
 									class="min-w-fit outline-none p-1.5 {selectedTag === '' &&
 									selectedConnectionType === ''
@@ -452,7 +452,7 @@
 								>
 									{$i18n.t('Local')}
 								</button>
-							{/if}
+							{/if} -->
 
 							{#if items.find((item) => item.model?.connection_type === 'external')}
 								<button

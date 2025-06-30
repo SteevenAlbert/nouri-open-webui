@@ -68,16 +68,16 @@
 					<Marquee
 						duration={5000}
 						words={[
-							$i18n.t('Explore the cosmos'),
-							$i18n.t('Unlock mysteries'),
-							$i18n.t('Chart new frontiers'),
-							$i18n.t('Dive into knowledge'),
-							$i18n.t('Discover wonders'),
-							$i18n.t('Ignite curiosity'),
-							$i18n.t('Forge new paths'),
-							$i18n.t('Unravel secrets'),
-							$i18n.t('Pioneer insights'),
-							$i18n.t('Embark on adventures')
+				$i18n.t('Understand God’s creation'),
+				$i18n.t('Uncover divine truths'),
+				$i18n.t('Chart paths of faith'),
+				$i18n.t('Dive into God’s Word'),
+				$i18n.t('Discover His wonders'),
+				$i18n.t('Ignite spiritual curiosity'),
+				$i18n.t('Walk in His purpose'),
+				$i18n.t('Unveil heavenly mysteries'),
+				$i18n.t('Pioneer kingdom insights'),
+				$i18n.t('Embark on a journey with Christ')
 						]}
 					/>
 

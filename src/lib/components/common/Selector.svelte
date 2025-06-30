@@ -53,7 +53,7 @@
 		sideOffset={4}
 	>
 		<slot>
-			{#if searchEnabled}
+			<!-- {#if searchEnabled}
 				<div class="flex items-center gap-2.5 px-5 mt-3.5 mb-3">
 					<Search className="size-4" strokeWidth="2.5" />
 
@@ -65,7 +65,7 @@
 				</div>
 
 				<hr class="border-gray-100 dark:border-gray-850" />
-			{/if}
+			{/if} -->
 
 			<div class="px-3 my-2 max-h-80 overflow-y-auto">
 				{#each filteredItems as item}

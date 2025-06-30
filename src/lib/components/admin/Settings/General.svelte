@@ -120,59 +120,9 @@
 		{#if adminConfig !== null}
 			<div class="">
 				<div class="mb-3.5">
-					<div class=" mb-2.5 text-base font-medium">{$i18n.t('General')}</div>
+					
 
-					<hr class=" border-gray-100 dark:border-gray-850 my-2" />
-
-					<div class="mb-2.5">
-						<div class=" mb-1 text-xs font-medium flex space-x-2 items-center">
-							<div>
-								{$i18n.t('Version')}
-							</div>
-						</div>
-						<div class="flex w-full justify-between items-center">
-							<div class="flex flex-col text-xs text-gray-700 dark:text-gray-200">
-								<div class="flex gap-1">
-									<Tooltip content={WEBUI_BUILD_HASH}>
-										v{WEBUI_VERSION}
-									</Tooltip>
-
-									<a
-										href="https://github.com/open-webui/open-webui/releases/tag/v{version.latest}"
-										target="_blank"
-									>
-										{updateAvailable === null
-											? $i18n.t('Checking for updates...')
-											: updateAvailable
-												? `(v${version.latest} ${$i18n.t('available!')})`
-												: $i18n.t('(latest)')}
-									</a>
-								</div>
-
-								<button
-									class=" underline flex items-center space-x-1 text-xs text-gray-500 dark:text-gray-500"
-									type="button"
-									on:click={() => {
-										showChangelog.set(true);
-									}}
-								>
-									<div>{$i18n.t("See what's new")}</div>
-								</button>
-							</div>
-
-							<button
-								class=" text-xs px-3 py-1.5 bg-gray-50 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-800 transition rounded-lg font-medium"
-								type="button"
-								on:click={() => {
-									checkForVersionUpdates();
-								}}
-							>
-								{$i18n.t('Check for updates')}
-							</button>
-						</div>
-					</div>
-
-					<div class="mb-2.5">
+					<!-- <div class="mb-2.5">
 						<div class="flex w-full justify-between items-center">
 							<div class="text-xs pr-2">
 								<div class="">
@@ -264,13 +214,13 @@
 								{/if}
 							</div>
 
-							<!-- <button
+							 <button
 								class="flex-shrink-0 text-xs px-3 py-1.5 bg-gray-50 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-800 transition rounded-lg font-medium"
 							>
 								{$i18n.t('Activate')}
-							</button> -->
+							</button> 
 						</div>
-					</div>
+					</div> -->
 				</div>
 
 				<div class="mb-3">
@@ -696,6 +646,58 @@
 								placeholder={`https://example.com/webhook`}
 								bind:value={webhookUrl}
 							/>
+						</div>
+					</div>
+
+					<div class=" mb-2.5 mt-4.5 text-base font-medium">{$i18n.t('General')}</div>
+
+					<hr class=" border-gray-100 dark:border-gray-850 my-2" />
+
+					<div class="mb-2.5">
+						<div class=" mb-1 text-xs font-medium flex space-x-2 items-center">
+							<div>
+								{$i18n.t('Version')}
+							</div>
+						</div>
+						<div class="flex w-full justify-between items-center">
+							<div class="flex flex-col text-xs text-gray-700 dark:text-gray-200">
+								<div class="flex gap-1">
+									<Tooltip content={WEBUI_BUILD_HASH}>
+										v{WEBUI_VERSION}
+									</Tooltip>
+
+									<a
+										href="https://github.com/open-webui/open-webui/releases/tag/v{version.latest}"
+										target="_blank"
+									>
+										{updateAvailable === null
+											? $i18n.t('Checking for updates...')
+											: updateAvailable
+												? `(v${version.latest} ${$i18n.t('available!')})`
+												: $i18n.t('(latest)')}
+									</a>
+								</div>
+
+								<button
+									class=" underline flex items-center space-x-1 text-xs text-gray-500 dark:text-gray-500"
+									type="button"
+									on:click={() => {
+										showChangelog.set(true);
+									}}
+								>
+									<div>{$i18n.t("See what's new")}</div>
+								</button>
+							</div>
+
+							<button
+								class=" text-xs px-3 py-1.5 bg-gray-50 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-800 transition rounded-lg font-medium"
+								type="button"
+								on:click={() => {
+									checkForVersionUpdates();
+								}}
+							>
+								{$i18n.t('Check for updates')}
+							</button>
 						</div>
 					</div>
 				</div>
